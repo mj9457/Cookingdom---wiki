@@ -44,144 +44,300 @@
                                     <p>목표 레벨</p>
                                     <input type="number" tabindex="1" id="input-level-before" min="1" max="60" value style="user-select: auto;">
                                     <input type="button" value="초기화" onclick="reset()">-->
+                                    <aside>
+                                        <div class=expcal>
+                                            <h4>현재 레벨 경험치<br>(밑에 경험치표에서 확인)</h4>
+                                            <input id="number1" type="text" value="" placeholder="현재레벨 누적경험치 + 쿠키에 들어있는 경험치 ">
+                                            <br>
+                                            <h4>목표 레벨 경험치<br>(밑에 경험치표에서 확인)</h4>
+                                            <input id="number2" type="text" value="" placeholder="만렙(60) = 5,437,670exp">
+                                            <br>
+                                            <input type="button" value="필요한 1레벨 별사탕 갯수" onclick="expsum()">
+                                            <br><br>
+                                            <input type="text" id="expsum" placeholder="필요한 별사탕 갯수">
+                                            <br>
+                                            <input type="button" onclick="reset()" value="초기화">
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </aside>
+                                    <aside>
+                                        <div class=expcal2>
+                                            <h4>총 필요 레벨 경험치<br>(밑에 경험치표에서 확인)</h4>
+                                            <input id="number5" type="text" value="" placeholder="만렙(60) = 5,437,670exp">
+                                            <br>
+                                            <h4>별사탕 총 생산량<br>(※다음 계산기에서 계산 필수※)</h4>
+                                            <input id="number6" type="text" value="" placeholder="다음 계산기에서 계산 가능">
+                                            <br>
+                                            <input type="button" value="만렙까지 소요일수" onclick="exptime()">
+                                            <br><br>
+                                            <input type="text" id="exptime" placeholder="만렙까지 소요일수">
+                                            <br>
+                                            <input type="button" onclick="reset2()" value="초기화">
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </aside>
+                                    <aside>
+                                        <div class=expcal1>
+                                            <h4>현재 쿠키하우스 보유 갯수<br>(2층은 1개로 생각해야한다)</h4>
+                                            <input id="number3" type="text" value="" placeholder="쿠키하우스 1층과 2층 갯수 혼동조심">
+                                            <br>
+                                            <h4>현재 별사탕 생산량<br>(1회, 1레벨, 최대 생산량)</h4>
+                                            <input id="number4" type="text" value="" placeholder="쿠키하우스 눌러보면 알 수 있음">
+                                            <br>
+                                            <input type="button" value="별사탕 총 생산량" onclick="exp()">
+                                            <br><br>
+                                            <input type="text" id="exp" placeholder="전체 쿠키하우스 총 생산량">
+                                            <br>
+                                            <input type="button" onclick="reset1()" value="초기화">
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </aside>
+                                    
                                     <table class="article-table mw-collapsible" style="margin-left: auto; margin-right: auto; border: none;">
                                         <caption>경험치 표</caption>
                                         <tbody>
                                             <tr>
                                                 <th>레벨</th>
                                                 <th>경험치</th>
-                                                <td rowspan="11"></td>
+                                                <th>누적<br>경험치</th>
+                                                <td rowspan="18"></td>
                                                 <th>레벨</th>
                                                 <th>경험치</th>
-                                                <td rowspan="11"></td>
+                                                <th>누적<br> 경험치</th>
+                                                <td rowspan="18"></td>
                                                 <th>레벨</th>
                                                 <th>경험치</th>
-                                                <td rowspan="11"></td>
+                                                <th>누적<br>경험치</th>
+                                                <td rowspan="18"></td>
                                                 <th>레벨</th>
                                                 <th>경험치</th>
-                                                <td rowspan="11"></td>
+                                                <th>누적<br>경험치</th>
+                                                <td rowspan="18"></td>
                                                 <th>레벨</th>
                                                 <th>경험치</th>
+                                                <th>누적<br>경험치</th>
                                             </tr>
                                             <tr>
+                                                <td><b>1</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>0</td>
+                                                <td onclick="add(0)">0</td>
                                                 <td><b>2</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>60</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>480</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>2760</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>15380</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>84830</td>
-                                            </tr>
-                                            <tr>
+                                                <td>60</td>
                                                 <td><b>3</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>80</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>570</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>3280</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>18250</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>100610</td>
-                                            </tr>
-                                            <tr>
+                                                <td>140</td>
                                                 <td><b>4</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>100</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>680</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>3900</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>216500</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>119330</td>
-                                            </tr>
-                                            <tr>
+                                                <td>240</td>
                                                 <td><b>5</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>120</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>810</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>4630</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>25680</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>141530</td>
+                                                <td>360</td>
                                             </tr>
                                             <tr>
                                                 <td><b>6</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>150</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>970</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>5500</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>30460</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>167860</td>
-                                            </tr>
-                                            <tr>
+                                                <td>510</td>
                                                 <td><b>7</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>180</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1160</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>6530</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>36130</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>199090</td>
-                                            </tr>
-                                            <tr>
+                                                <td>690</td>
                                                 <td><b>8</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>220</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1380</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>7750</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>42860</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>236130</td>
-                                            </tr>
-                                            <tr>
+                                                <td>910</td>
                                                 <td><b>9</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>270</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>16400</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>9200</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>50840</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>280160</td>
-                                            </tr>
-                                            <tr>
+                                                <td>1180</td>
                                                 <td><b>10</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>330</td>
-                                                <td><b>12</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1950</td>
-                                                <td><b>22</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>10920</td>
-                                                <td><b>32</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>60300</td>
-                                                <td><b>42</b></td>
-                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>1510</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
                                             </tr>
                                             <tr>
                                                 <td><b>11</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>400</td>
+                                                <td>1910</td>
                                                 <td><b>12</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>480</td>
+                                                <td>2390</td>
+                                                <td><b>13</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>570</td>
+                                                <td>2960</td>
+                                                <td><b>14</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>680</td>
+                                                <td>3640</td>
+                                                <td><b>15</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>810</td>
+                                                <td>4450</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>16</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>970</td>
+                                                <td>5420</td>
+                                                <td><b>17</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1160</td>
+                                                <td>6580</td>
+                                                <td><b>18</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1380</td>
+                                                <td>7960</td>
+                                                <td><b>19</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1640</td>
+                                                <td>9600</td>
+                                                <td><b>20</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>1950</td>
+                                                <td>11550</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>21</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>2320</td>
+                                                <td>13870</td>
                                                 <td><b>22</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>2760</td>
+                                                <td>16630</td>
+                                                <td><b>23</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>3280</td>
+                                                <td>19910</td>
+                                                <td><b>24</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>3900</td>
+                                                <td>23810</td>
+                                                <td><b>25</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>4630</td>
+                                                <td>28440</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>26</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>5500</td>
+                                                <td>33940</td>
+                                                <td><b>27</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>6530</td>
+                                                <td>40470</td>
+                                                <td><b>28</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>7750</td>
+                                                <td>48220</td>
+                                                <td><b>29</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>9200</td>
+                                                <td>57420</td>
+                                                <td><b>30</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>10920</td>
+                                                <td>68340</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>31</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>12960</td>
+                                                <td>81300</td>
                                                 <td><b>32</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>15380</td>
+                                                <td>96680</td>
+                                                <td><b>33</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>18250</td>
+                                                <td>114930</td>
+                                                <td><b>34</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>21650</td>
+                                                <td>136580</td>
+                                                <td><b>35</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>25680</td>
+                                                <td>162260</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>36</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>30460</td>
+                                                <td>192720</td>
+                                                <td><b>37</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>36130</td>
+                                                <td>228850</td>
+                                                <td><b>38</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>42860</td>
+                                                <td>271710</td>
+                                                <td><b>39</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>50840</td>
+                                                <td>322550</td>
+                                                <td><b>40</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>60300</td>
+                                                <td>382850</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>41</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>71520</td>
+                                                <td>454370</td>
                                                 <td><b>42</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>84830</td>
+                                                <td>539200</td>
+                                                <td><b>43</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>100610</td>
+                                                <td>639810</td>
+                                                <td><b>44</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>119330</td>
+                                                <td>759140</td>
+                                                <td><b>45</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>141530</td>
+                                                <td>900670</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>46</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>167860</td>
+                                                <td>1068530</td>
+                                                <td><b>47</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>199090</td>
+                                                <td>1267620</td>
+                                                <td><b>48</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>236130</td>
+                                                <td>1503750</td>
+                                                <td><b>49</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>280160</td>
+                                                <td>1783910</td>
+                                                <td><b>50</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>2116070</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>51</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>2448230</td>
+                                                <td><b>52</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>2780390</td>
+                                                <td><b>53</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>3112550</td>
+                                                <td><b>54</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>3444710</td>
+                                                <td><b>55</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>3776870</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>56</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>4109030</td>
+                                                <td><b>57</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>4441190</td>
+                                                <td><b>58</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>4773350</td>
+                                                <td><b>59</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>5105510</td>
+                                                <td><b>60</b></td>
+                                                <td><img src="images/별사탕1.png" width="37" height="35"><br>332160</td>
+                                                <td>5437670</td>
                                             </tr>
                                         <!--
                                             <td><b>51-60</b>
@@ -189,7 +345,7 @@
                                         <td><div style="position:relative; margin: 5px 5px 5px 0; display:inline-block; width:37px;"><a href="/wiki/EXP_Jellies" title="EXP Jellies"><img alt="EXP Jellies" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" decoding="async" width="37" height="35" data-image-name="Exp star jelly.png" data-image-key="Exp_star_jelly.png" data-src="https://static.wikia.nocookie.net/cookierunkingdom/images/1/18/Exp_star_jelly.png/revision/latest/scale-to-width-down/37?cb=20210410231241" class="lazyload" /></a><span class="crkIcon">332,160</span></div>
                                         </td></tr>-->
                                         <tr>
-                                        <td colspan="14" align="center"><b>Total:</b> <img src="images/별사탕1.png" width="37" height="35"><br>5,437,570</span></div>
+                                        <td colspan="19" text-align="center"><b>Total:</b> <img src="images/별사탕1.png" width="37" height="35"><br>5,437,670</span></div>
                                         </td></tr></tbody></table>
 								</section>
 						</div>
@@ -302,6 +458,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+            <script src="assets/js/expcal.js"></script>
 	</body>
 </html>
