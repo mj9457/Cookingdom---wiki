@@ -1,3 +1,9 @@
+프로젝트 주소 : https://cookie-run-kingdom-wiki.netlify.app
+프로젝트 소개 : 쿠키런 공략과 편리한 계산기들을 한눈에 보기위해서 제작한 웹페이지
+프로젝트 개발 및 설계 : 1인 개발 및 설계
+프로젝트	이미지 : 공식카페 , 직접 제작
+
+
 Editorial by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
