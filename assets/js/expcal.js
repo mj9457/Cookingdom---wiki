@@ -4,7 +4,7 @@ function expsum() {
     var num2 = document.getElementById("number2").value;
     
     var result = Math.round((parseInt(num2) - parseInt(num1)) / parseInt(14));
-    document.getElementById("expsum").value = result;
+    document.getElementById("expsum").value = result + '개';
 }
 
 function reset() {
@@ -19,7 +19,7 @@ function exp() {
     var num4 = document.getElementById("number4").value;
     
     var result = parseInt(num3) * parseInt(num4);
-    document.getElementById("exp").value = result;
+    document.getElementById("exp").value = result + '개';
 }
 
 function reset1() {
@@ -34,7 +34,7 @@ function exptime() {
     var num6 = document.getElementById("number6").value;
     
     var result = ((parseInt(num5) / ((parseInt(num6) * 14)/8))/24);
-    document.getElementById("exptime").value = result.toPrecision(4);
+    document.getElementById("exptime").value = result.toPrecision(4) + '일';
 }
 
 function reset2() {

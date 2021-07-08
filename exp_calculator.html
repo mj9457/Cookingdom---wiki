@@ -36,14 +36,7 @@
 								<section>
 									<header class="main">
 									</header>
-									<span class="image main"><img src="images/별사탕계산기.jpg" width=1080 alt="" /></span>
-                                    <!--
-                                    <p>별사탕 계산기</p>
-                                    <p>현재 레벨</p>
-                                    <input type="number" tabindex="1" id="input-level-before" min="1" max="60" value style="user-select: auto;">
-                                    <p>목표 레벨</p>
-                                    <input type="number" tabindex="1" id="input-level-before" min="1" max="60" value style="user-select: auto;">
-                                    <input type="button" value="초기화" onclick="reset()">-->
+									<span class="image main"><img src="images/별사탕계산기.jpg" width=1080 alt="" /></span>                                    
                                     <aside>
                                         <div class=expcal>
                                             <h4>현재 레벨 경험치<br>(밑에 경험치표에서 확인)</h4>
@@ -96,9 +89,11 @@
                                         </div>
                                     </aside>
                                     
-                                    <table class="article-table mw-collapsible" style="margin-left: auto; margin-right: auto; border: none;">
-                                        <caption>경험치 표</caption>
+                                    <table class="article-table mw-collapsible" style="margin-left: auto; margin-right: auto; border: none;">                                        
                                         <tbody>
+                                            <thead>
+                                                <th colspan="19">경험치 표</th>
+                                            </thead>
                                             <tr>
                                                 <th>레벨</th>
                                                 <th>경험치</th>
@@ -123,7 +118,7 @@
                                             <tr>
                                                 <td><b>1</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>0</td>
-                                                <td onclick="add(0)">0</td>
+                                                <td>0</td>
                                                 <td><b>2</b></td>
                                                 <td><img src="images/별사탕1.png" width="37" height="35"><br>60</td>
                                                 <td>60</td>
@@ -395,7 +390,7 @@
 									<li>
 										<span class="opener">계산기 모음</span>
 										<ul>
-											<li><a href="cool_calculaotr.html">쿨타임 계산기</a></li>
+											<li><a href="cool_calculator.html">쿨타임 계산기</a></li>
 											<li><a href="exp_calculator.html">별사탕 계산기</a></li>
 											<li><a href="https://fervent-kepler-9faf8a.netlify.app/" target="_blank">용체력 계산기-사이트 바로가기</a></li>
 										</ul>

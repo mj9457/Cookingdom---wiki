@@ -2340,3 +2340,6 @@ button,
 }
 
 
+table > thead.coolisthead > tr > th { 
+  font-size: x-large;
+}
