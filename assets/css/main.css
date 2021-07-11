@@ -2339,7 +2339,7 @@ button,
   font-size:large
 }
 
-
-table > thead.coolisthead > tr > th { 
-  font-size: x-large;
-}
+div.newupdate{
+  text-align: center; }
+  div.newupdate > h2 {
+  color: rgb(255, 0, 0); }
