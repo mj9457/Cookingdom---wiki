@@ -2317,7 +2317,7 @@ button,
     padding-top: 0; }
 
 /* 쿠폰목록 */    
-.item{
+.coupon_item{
   display: inline-block;
   flex-direction: column;
     flex: none;
@@ -2343,3 +2343,50 @@ div.newupdate{
   text-align: center; }
   div.newupdate > h2 {
   color: rgb(255, 0, 0); }
+
+/* 검색기능 */
+.s_searchbox{
+  width: 90%;
+  margin: 10px auto;
+}
+.s_header{
+  background: #ECDFBF;
+  overflow: hidden;
+  text-align: center;
+}
+#s_value{
+  border: none;
+  background: #E0D3B6;
+  padding: 6px;
+  font-size: 18px;
+  width: 80%;
+  border-radius: 6px;
+  color: white;
+}
+#s_value:focus{
+  outline: none;
+}
+.s_container{
+  padding: 1%;
+}
+.s_item{
+  margin: 3% 0px;
+  display: flex;
+  align-items: center;
+}
+.s_icon{
+  width: 25px;
+  height: 25px;
+  background: #E0D3B6;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.s_name{
+  font-size: 17px;
+  font-weight: 470;
+  color: #333;
+}
